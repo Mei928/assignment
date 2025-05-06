@@ -1,5 +1,5 @@
 #### How to run
-package required: `pandas` and `requests` .
+package required: `pandas` and `requests`.
 Run the script: coconut_price.py, the script will:
    - Fetches hourly price data  (past 1 year) for multiple instruments on production and testnet of Deribit.
    - Multiply weight (amount) on each coin's prices to calculate possible coconut prices in USD at every time point.
