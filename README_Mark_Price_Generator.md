@@ -22,7 +22,7 @@
 2. Input for BS model:
      - Underlying: we need to assign specific underlying in order to fetch data and do calculations, here we assume the underlying to be BTC, for any other coin, the process is the same, we can simply change the variable `asset`
      - Interest rate:  for crypto currency it’s usually 0, also from the output of Deribit we also saw interest rate is 0, so another assumption is zero interest rate.
-     - Time to maturity (TTM): we only have the date, so we assume expiry is at 08:00 UTC, and simply calculate the difference between expiry time and now.
+     - Time to maturity (TTM): we only have the date, so we assume expiry is at 08:00 UTC, which is the usual expiry time of crypto options on Deribit. Then simply calculate the difference between expiry time and now.
      - The underlying price and implied volatility (IV): we need to fetch them from the Deribit API, for call and put, respectively. For standard strikes, I fetch IV from `mark_iv` of the same option, for custom strikes where there is no `mark_iv`, I fetch it from the `iv` of last traded option in that underlying (BTC)
  3. We loop through each strike price for both call and put, fetch the data and do the calculation.
  4. Make sure to fetch the data of put and call at the same time, compare results with Deribit.
