@@ -1,4 +1,5 @@
 #### How to run
+Package required: `pandas` and `requests` and `scipy`.
 1. set the **parameters** in the input section:
     - `asset`: Underlying asset symbol (e.g., `"BTC"`)
     - `expiry_code`: Option expiry date in format like `"23MAY25"`
