@@ -1,14 +1,16 @@
 #### How to run
+package required: `pandas` and `requests` .
 Run the script :coconut_price.py, the script will:
-     - Fetches hourly price data** (past 1 year) for multiple instruments on production and testnet of Deribit.
-     - Multiply weight (amount) on each coin's prices to calculate possible coconut prices in USD at every time point.
-     - Find the most probable price by looking for the row with the minimal variance.
-     - Print the most probable price on both testnet and production net.
+   - Fetches hourly price data  (past 1 year) for multiple instruments on production and testnet of Deribit.
+   - Multiply weight (amount) on each coin's prices to calculate possible coconut prices in USD at every time point.
+   - Find the most probable price by looking for the row with the minimal variance.
+   - Print the most probable price on both testnet and production net.
+ 
 
 #### Key challanges
-- PAXG data is missing from deribit production before December 2024
-- Define the frequency at which we need the price data
-- how to define the most possible price : minimal variance
+- PAXG data is missing from deribit production before December 2024.
+- Define the frequency at which we need the price data.
+- how to define the most possible price : minimal variance.
 
 #### Reasoning
 1. In the screenshot, the coconut price—regardless of the payment coin—should be the same. That means there must be a point in time where, for each coin, the **amount paid × coin price** equals the same total (i.e., the same coconut price).
